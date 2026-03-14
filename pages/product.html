@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+<h2>Product Details</h2>
+<a href="../index.html">Back</a>
+</header>
+
+<div class="product-page">
+<img id="productImg" class="product-img">
+<h2 id="productName"></h2>
+<p id="productPrice"></p>
+<p id="productDesc"></p>
+
+<h3>Reviews</h3>
+<div id="reviewList"></div>
+
+<input id="reviewText" placeholder="Write review">
+<button onclick="addReview()">Submit Review</button>
+
+</div>
+
+<script src="../data/products.js"></script>
+<script src="../js/product.js"></script>
+
+</body>
+</html>
