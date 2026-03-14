@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/style.css">
+<title>Orders</title>
+</head>
+<body>
+
+<h1>Orders</h1>
+<ul id="orders"></ul>
+
+<script>
+let orders=JSON.parse(localStorage.getItem("orders"))||[]
+let list=document.getElementById("orders")
+orders.forEach(o=>{
+let li=document.createElement("li")
+li.innerText="Order "+o.id+" "+o.date
+list.appendChild(li)
+})
+</script>
+
+</body>
+</html>

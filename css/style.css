@@ -1,0 +1,12 @@
+
+body{font-family:Arial;margin:0;background:#f3f3f3}
+.topbar{display:flex;gap:10px;background:#131921;color:white;padding:12px}
+.nav{background:#232f3e;padding:10px}
+.nav button{margin:4px}
+.filters{padding:10px;background:#eee;display:flex;gap:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
+.card{background:white;padding:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.card img{width:100%;height:150px;object-fit:cover}
+button{padding:6px 10px;margin:4px}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5)}
+.modalBox{background:white;padding:20px;margin:100px auto;width:350px}

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vasu Commerce Platform</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+<h1>Vasu Commerce</h1>
+
+<input id="search" placeholder="Search products..." onkeyup="searchProducts()">
+
+<select onchange="sortProducts(this.value)">
+<option value="">Sort</option>
+<option value="price_low">Price Low → High</option>
+<option value="price_high">Price High → Low</option>
+<option value="rating">Top Rated</option>
+</select>
+
+<button onclick="openCart()">Cart (<span id="cartCount">0</span>)</button>
+<button onclick="openWishlist()">Wishlist</button>
+<a href="pages/orders.html">Orders</a>
+<a href="pages/profile.html">Profile</a>
+<a href="admin/admin.html">Admin</a>
+
+</header>
+
+<nav class="nav">
+<button onclick="filterCategory('all')">All</button>
+<button onclick="filterCategory('electronics')">Electronics</button>
+<button onclick="filterCategory('gaming')">Gaming</button>
+<button onclick="filterCategory('fashion')">Fashion</button>
+<button onclick="filterCategory('accessories')">Accessories</button>
+</nav>
+
+<section class="filters">
+
+<label>Min Price
+<input type="number" id="minPrice" onchange="applyPriceFilter()">
+</label>
+
+<label>Max Price
+<input type="number" id="maxPrice" onchange="applyPriceFilter()">
+</label>
+
+<label>Rating
+<select onchange="applyRatingFilter(this.value)">
+<option value="0">All</option>
+<option value="3">3+</option>
+<option value="4">4+</option>
+</select>
+</label>
+
+</section>
+
+<main>
+<div id="productGrid" class="grid"></div>
+</main>
+
+<div id="cartModal" class="modal"><div class="modalBox">
+<h2>Your Cart</h2>
+<ul id="cartItems"></ul>
+<p id="cartTotal"></p>
+<a href="pages/checkout.html"><button>Checkout</button></a>
+<button onclick="closeCart()">Close</button>
+</div></div>
+
+<div id="wishlistModal" class="modal"><div class="modalBox">
+<h2>Wishlist</h2>
+<ul id="wishlistItems"></ul>
+<button onclick="closeWishlist()">Close</button>
+</div></div>
+
+<script src="data/products.js"></script>
+
+<script src="js/services/storageService.js"></script>
+<script src="js/services/recommendationService.js"></script>
+
+<script src="js/modules/cart.js"></script>
+<script src="js/modules/wishlist.js"></script>
+<script src="js/modules/filters.js"></script>
+<script src="js/modules/render.js"></script>
+<script src="js/modules/reviews.js"></script>
+<script src="js/modules/coupons.js"></script>
+<script src="js/modules/analytics.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
